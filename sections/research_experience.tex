@@ -1,0 +1,84 @@
+\Section
+{Research Experience}
+{Research Experience}
+{PDF:ResearchExperience}
+
+\Entry
+\href{https://www.microsoft.com/en-us/research/lab/microsoft-research-india/}
+{\textbf{Microsoft Research Lab}},
+Bengaluru, KA, India
+
+\Gap
+\BulletItem
+Pre-doctoral Researcher, AI-Infrastructure
+\hfill
+\DatestampYMD{2023}{07}{10} --
+Present
+\begin{Detail}
+\SubBulletItem
+Project:
+Compute-Communication Overlap for Efficient Distributed LLM Inference
+\SubBulletItem
+Advisors: \href{https://www.microsoft.com/en-us/research/people/nkwatra/}{Dr. Nipun Kwatra} and \href{https://www.microsoft.com/en-us/research/people/ramjee/}{Dr. Ramachandran Ramjee}
+
+\Gap
+\SubBulletItem
+\textbf{TokenWeave:}
+\SubSubBulletItem
+Co-authored \textit{TokenWeave}, a system for efficient compute–communication overlap in distributed LLM inference, achieving up to {\bf $1.29\times$} latency and {\bf $1.26\times$} throughput improvements on $8\times$H100 GPUs over the vLLM baseline, outperforming state-of-the-art solutions such as TileLink and NanoFlow
+\SubSubBulletItem
+Designed and implemented a fused {\bf AllReduce--Residual--RMSNorm} kernel using NVIDIA Hopper’s NVSHARP and Multimem features, reducing GPU SM usage to just 2–8 SMs and enabling compute–communication overlap in vLLM, with performance gains even at small batch sizes and short sequence lengths
+
+\Gap
+\SubBulletItem
+\textbf{Before TokenWeave – Overlap for Efficient Inference in Mixture-of-Experts (MoE) Models:}
+\SubSubBulletItem
+Implemented {\it Expert Parallelism in vLLM} and demonstrated its benefits Tensor Parallelism for MoE models
+\SubSubBulletItem
+Designed a lightweight signaling mechanism to initiate Direct Memory Access (DMA)-based partial GPU–GPU communication, freeing all SMs for compute and enabling effective compute–communication overlap
+\SubSubBulletItem
+Achieved up to a {\bf 20\%} reduction in MoE MLP latency for Mixtral-22B in microbenchmarks on $8\times$H100 GPUs
+
+\Gap
+\SubBulletItem
+\textbf{Other Contributions:}
+\SubSubBulletItem
+Conducted an in-depth analysis of all prior compute–communication overlap techniques (e.g., TileLink, Flux, NanoFlow), identifying limitations in their applicability to modern GPU architectures and emerging models
+\end{Detail}
+
+\BigGap
+\Entry
+\href{https://www.cse.iitb.ac.in/synerg/}
+{\textbf{Dept. of Computer Science and Engineering}},
+IIT Bombay, Mumbai, MH, India
+
+\Gap
+\BulletItem
+Undergraduate Researcher, SynerG Lab
+\hfill
+\DatestampYM{2022}{08} --
+\DatestampYM{2023}{06}
+\begin{Detail}
+\SubBulletItem
+Project:
+emucxl: Emulation Framework and Access Library for CXL-Based Disaggregated Memory Systems
+\SubBulletItem
+Advisor: \href{https://www.cse.iitb.ac.in/~puru}{Prof. Purushottam Kulkarni}
+\SubSubBulletItem
+Developed a user-space library coupled with a {\bf NUMA-based CXL emulation backend} for standardized CXL memory access that enables rapid prototyping of disaggregated memory solutions
+\SubSubBulletItem 
+Conducted a literature survey on CXL standards and showed emucxl capabilities through practical use cases
+\end{Detail}
+
+\Gap
+\begin{Detail}
+\SubBulletItem
+Project:
+Persistent Memory (PMem) Applications~ [\href{https://rajagond.github.io/docs/rnd1_report.pdf}{PDF}, \href{https://github.com/rajagond/pmem_cxl/tree/main/persistent_memory_rnd1}{code}]
+\SubBulletItem
+Advisors: \href{https://www.cse.iitb.ac.in/~puru}{Prof. Purushottam Kulkarni} and \href{https://www.cse.iitb.ac.in/~umesh/index.html}{Prof. Umesh Bellur}
+\SubSubBulletItem
+Designed and implemented a robust reader-writer program on Non-Volatile Memory using advanced array and pointer techniques, which provides fault tolerance and efficient data access
+\SubSubBulletItem
+Explored {\bf Persistent Memory Development Kit} libraries to understand PMem capabilities and analyzed performance differences between traditional and PMem-based Redis using real-world benchmarks
+\end{Detail}

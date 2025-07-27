@@ -1,0 +1,164 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CV.tex
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%% Modified by Raja Gond 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,MMMyyyy,nonstopmode]{cv}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Raja Gond}
+\newcommand{\CVTitle}{Raja Gond}
+\newcommand{\CVWebpage}{https://rajagond.github.io}
+\newcommand{\CVGithub}{https://github.com/rajagond}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+\tagline{Microsoft Research India | IIT Bombay'23}
+\par
+\website{rajagond.github.io}
+\email{raja.gond@outlook.com}
+% \,\SubBulletSymbol\,
+\github{rajagond}
+\scholar{https://scholar.google.com/citations?hl=en&user=L1ZFr9cAAAAJ}
+% \href{\CVGithub}{github.com/rajagond}
+% \,\SubBulletSymbol\,
+
+% \href{\CVWebpage}
+% {\url{\CVWebpage}}
+\end{SubTitle}
+
+\begin{Body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\input{sections/education}
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+\input{sections/publications}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/research_experience}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Industry EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/industry_experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Teaching EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/taship}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Mentorship EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/mentorship}
+
+%%%%%%%%%%%%%%%
+%% Service %%
+%%%%%%%%%%%%%%%
+
+\input{sections/service}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% AWARDS & SCHOLARSHIPS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/awards}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Key Projects %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/projects}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Talks %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/talks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Course Projects %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/other_projects}
+
+%%%%%%%%%%%%%%%
+%% Key Coursework %%
+%%%%%%%%%%%%%%%
+
+\input{sections/courseworks}
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\input{sections/skills}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Extracurricular activities %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/extracurricular}
+
+\end{Body}
+\end{document}
